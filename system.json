@@ -9,7 +9,7 @@
     "verified": 11
   },
   "author": "Antigravity",
-  "scripts": ["wurm.js"],
+  "scripts": ["module/wurm.js"],
   "styles": ["styles/wurm.css"],
   "packs": [],
   "languages": [],
