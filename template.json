@@ -1,0 +1,58 @@
+{
+  "Actor": {
+    "types": ["character", "npc"],
+    "templates": {
+      "base": {
+        "health": {
+          "value": 10,
+          "min": 0,
+          "max": 10
+        }
+      }
+    },
+    "character": {
+      "templates": ["base"],
+      "totem": "",
+      "experience": {
+        "value": 0
+      },
+      "notes": ""
+    },
+    "npc": {
+      "templates": ["base"],
+      "notes": ""
+    }
+  },
+  "Item": {
+    "types": ["strength", "weakness", "talent", "secretArt", "weapon", "gear"],
+    "templates": {
+      "baseItem": {
+        "description": ""
+      }
+    },
+    "strength": {
+      "templates": ["baseItem"],
+      "modifier": 1
+    },
+    "weakness": {
+      "templates": ["baseItem"],
+      "modifier": -1
+    },
+    "talent": {
+      "templates": ["baseItem"]
+    },
+    "secretArt": {
+      "templates": ["baseItem"]
+    },
+    "weapon": {
+      "templates": ["baseItem"],
+      "damage": "1d6",
+      "modifier": 0
+    },
+    "gear": {
+      "templates": ["baseItem"],
+      "quantity": 1,
+      "weight": 0
+    }
+  }
+}

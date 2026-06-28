@@ -1,0 +1,57 @@
+<form class="{{cssClass}} flexcol" autocomplete="off">
+  <header class="sheet-header">
+    <img class="profile-img" src="{{item.img}}" data-edit="img" title="{{item.name}}"/>
+    <div class="header-fields">
+      <h1 class="charname"><input name="name" type="text" value="{{item.name}}" placeholder="Name"/></h1>
+    </div>
+  </header>
+
+  <nav class="sheet-tabs tabs" data-group="primary">
+    <a class="item" data-tab="description">Description</a>
+    <a class="item" data-tab="attributes">Attributes</a>
+  </nav>
+
+  <section class="sheet-body">
+    <div class="tab" data-group="primary" data-tab="description">
+      {{editor systemData.description target="system.description" button=true owner=owner editable=editable}}
+    </div>
+
+    <div class="tab attributes" data-group="primary" data-tab="attributes">
+      {{#if (eq item.type "weapon")}}
+      <div class="resource">
+        <label>Damage</label>
+        <input type="text" name="system.damage" value="{{systemData.damage}}" data-dtype="String"/>
+      </div>
+      <div class="resource">
+        <label>Modifier</label>
+        <input type="text" name="system.modifier" value="{{systemData.modifier}}" data-dtype="Number"/>
+      </div>
+      {{/if}}
+
+      {{#if (eq item.type "gear")}}
+      <div class="resource">
+        <label>Quantity</label>
+        <input type="text" name="system.quantity" value="{{systemData.quantity}}" data-dtype="Number"/>
+      </div>
+      <div class="resource">
+        <label>Weight</label>
+        <input type="text" name="system.weight" value="{{systemData.weight}}" data-dtype="Number"/>
+      </div>
+      {{/if}}
+
+      {{#if (eq item.type "strength")}}
+      <div class="resource">
+        <label>Modifier</label>
+        <input type="text" name="system.modifier" value="{{systemData.modifier}}" data-dtype="Number"/>
+      </div>
+      {{/if}}
+
+      {{#if (eq item.type "weakness")}}
+      <div class="resource">
+        <label>Modifier</label>
+        <input type="text" name="system.modifier" value="{{systemData.modifier}}" data-dtype="Number"/>
+      </div>
+      {{/if}}
+    </div>
+  </section>
+</form>
