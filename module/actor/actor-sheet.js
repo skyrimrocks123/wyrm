@@ -1,6 +1,6 @@
 export class WurmActorSheet extends ActorSheet {
   static get defaultOptions() {
-    return mergeObject(super.defaultOptions, {
+    return foundry.utils.mergeObject(super.defaultOptions, {
       classes: ["wurm", "sheet", "actor"],
       template: "systems/wurm/templates/actor/actor-sheet.html",
       width: 600,
@@ -11,7 +11,7 @@ export class WurmActorSheet extends ActorSheet {
 
   getData() {
     const context = super.getData();
-    context.systemData = context.data.system;
+    context.systemData = context.system;
     
     // Categorize items
     context.strengths = [];
