@@ -1,4 +1,5 @@
 {
+  "id": "wurm",
   "name": "wurm",
   "title": "Würm",
   "description": "An unofficial system for the Würm (Ice Age) RPG.",
@@ -16,4 +17,6 @@
   "gridUnits": "ft",
   "primaryTokenAttribute": "health",
   "secondaryTokenAttribute": null
+  "manifest": "https://raw.githubusercontent.com/skyrimrocks123/wyrm/refs/heads/main/system.json",
+  "download": "https://github.com/skyrimrocks123/wyrm/archive/refs/heads/main.zip"
 }
