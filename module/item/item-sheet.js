@@ -1,6 +1,6 @@
 export class WurmItemSheet extends ItemSheet {
   static get defaultOptions() {
-    return mergeObject(super.defaultOptions, {
+    return foundry.utils.mergeObject(super.defaultOptions, {
       classes: ["wurm", "sheet", "item"],
       template: "systems/wurm/templates/item/item-sheet.html",
       width: 520,
